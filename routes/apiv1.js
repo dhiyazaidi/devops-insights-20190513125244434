@@ -7,7 +7,10 @@ var request = REQUEST.defaults( {
     strictSSL: false
 });
 
-var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?appid=6b7b471967dd0851d0010cdecf28f829&units=imperial";
+//var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?appid=6b7b471967dd0851d0010cdecf28f829&units=metric";
+
+var OPENWEATHERURL = "http://api.openweathermap.org/data/2.5/weather?q=Hamilton,nz&units=metric";
+//api.openweathermap.org/data/2.5/weather?q={city name},{country code}
 
 exports.getWeather = function(req, res) {
 	var zip = req.query.zip;
